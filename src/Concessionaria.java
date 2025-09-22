@@ -111,6 +111,7 @@ public class Concessionaria {
     }
 
     public boolean realizarVenda(String placa, int idCliente, String dataVenda, String formaPagamento, double valor){
+
         Cliente cliente = null;
 
         for (int i = 0; i < this.totalClientes; i++){
@@ -120,7 +121,7 @@ public class Concessionaria {
             }
         }
 
-        Veiculo veiculo = null;
+        Veiculo veiculo;
 
         for (int i = 0; i < totalVeiculos; i++){
             if (this.veiculos.get(i).placa.equals(placa)){
