@@ -96,7 +96,7 @@ public class Concessionaria {
 
     }
 
-    public boolean remoerCLiente (int id){
+    public boolean removerCLiente (int id){
 
         for (int i = 0; i < totalClientes; i++){
             if (this.clientes.get(i).id == id){
@@ -134,7 +134,7 @@ public class Concessionaria {
                 if (vendaConcluida){
                     this.totalVendas++;
                     this.totalVeiculos--;
-                    veiculo.disponivel = false;
+                    veiculo.mudarDisponibilidade(veiculo.disponivel=false);
                     return vendaConcluida;
                 }
             }
