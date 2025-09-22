@@ -125,6 +125,9 @@ public class Concessionaria {
         for (int i = 0; i < totalVeiculos; i++){
             if (this.veiculos.get(i).placa.equals(placa)){
                 veiculo = this.veiculos.get(i);
+                if (!veiculo.disponivel){
+                    return false;
+                }
                 Venda venda = new Venda(veiculo, cliente, dataVenda, valor, formaPagamento);
                 boolean vendaConcluida = this.vendas.add(venda);
                 if (vendaConcluida){
