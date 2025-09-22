@@ -167,7 +167,8 @@ public class Concessionaria {
     @Override
     public String toString() {
         return String.format(
-                ""
+                "<Concessionaria: nome=%s, totalVeiculos=%d, totalCliente=%d, totalVendas=%d>",
+                this.nome, this.totalVeiculos, this.totalClientes, this.totalVendas
         );
     }
 }
